@@ -18,12 +18,11 @@ func index(w http.ResponseWriter, r *http.Request) {
 	os.Setenv("VERSION", "v0.0.1")
 	version := os.Getenv("VERSION")
 	w.Header().Set("VERSION", version)
-	w.WriteHeader(200)
+	w.WriteHeader(http.StatusOK)
 
-	responseCode := 200
 	host := r.Host
 
-	log.Printf("Status Code", responseCode)
+	log.Printf("Status Code", http.StatusOK)
 	log.Printf("host", host)
 
 }
