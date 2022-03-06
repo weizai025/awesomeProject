@@ -1,0 +1,3 @@
+docker login
+docker tag httpserver:0.0.1 imavei/httpserver:0.0.1
+docker run -d -p 8080:8082 imavei/httpserver:0.0.1
